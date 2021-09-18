@@ -14,23 +14,20 @@ public class Main {
         String s3 = "leehel";
         String s4 = "abcabcabc";
         String s5 = "abc";
-        String s6 = "bca";
-
+        String s6 = "bxa";
+        String s7 = "\n \n\n hello \t \n  \r";
         char c = '*';
 
-        /*for(int i=0;i<(s3.length()/2); i++){
 
-            if(s3.charAt(i)==s3.charAt((s3.length()-1)-i)){
+        for(int i=0; i<10; i++){
 
-                System.out.println("yes");
-            }else{
-                System.out.println("no");
-            }
+
+            System.out.println(applyIndent(s5,10));
 
         }
-*/
 
-        System.out.println(checkForAnagram(s5,s6));
+
+
 
 
 

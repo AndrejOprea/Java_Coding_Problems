@@ -1,5 +1,7 @@
 package com.company.myCls;
 
+import com.company.Main;
+
 import java.nio.charset.Charset;
 import java.util.*;
 
@@ -264,10 +266,7 @@ public class Probleme1 {
 
     public static String deleteDuplicates(String s){
 
-
         StringBuilder sb = new StringBuilder();
-
-
 
         for(int i=0; i<s.length(); i++){
 
@@ -276,13 +275,9 @@ public class Probleme1 {
                sb.append(s.charAt(i));
            }
 
-
         }
 
-
          return sb.toString();
-
-
 
 
     }
@@ -372,27 +367,73 @@ public class Probleme1 {
         return counter;
 
     }
-
+//???
     public static boolean checkForAnagram(String s1,String s2){
 
+        int[]v1 = vector_frecventa(s1);
+        int[]v2 = vector_frecventa(s2);
 
-        Character[]arr1 = Arrays.sort(s1.toCharArray(), new Comparator<Character>() {
-            @Override
-            public int compare(Character o1, Character o2) {
-                return (int)o1-(int)o2;
+        for(int i=0; i <v2.length; i++){
 
-            }
-        });
-        char[]arr2 = s2.toCharArray();
-
-        for(int i=0; i<arr1.length; i++){
-
-            if(arr1[i]==arr2[i]){
+            if(v1[i]==v2[i]){
                 return true;
             }
+
+
         }
+
         return false;
     }
+
+    public static String stringConcat(String s1, int n){
+        String text = "";
+
+        for(int i=0; i<n; i++){
+
+            text += s1;
+
+        }
+        return text;
+    }
+
+    public static String removingSpaces(String s){
+
+        String trimmed = s.trim();
+
+        return trimmed;
+    }
+
+    public static String longestPrefix(String s1, String s2){
+
+        StringBuilder sb = new StringBuilder();
+
+        for(int i=0; i< Math.min(s1.length(),s2.length()); i++){
+
+            if(s1.charAt(0)==s2.charAt(0)&&s1.charAt(i)==s2.charAt(i)){
+
+                sb.append(s1.charAt(i));
+            }
+
+        }
+        return sb.toString();
+    }
+
+    public static String applyIndent(String s1, int n){
+
+
+
+
+        return s1;
+
+
+
+
+
+    }
+
+
+
+
 
 
 
