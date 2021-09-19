@@ -2,8 +2,10 @@ package com.company.myCls;
 
 import com.company.Main;
 
+import java.math.BigInteger;
 import java.nio.charset.Charset;
 import java.util.*;
+import java.util.function.BinaryOperator;
 
 public class Probleme1 {
 
@@ -417,19 +419,141 @@ public class Probleme1 {
         }
         return sb.toString();
     }
-
-    public static String applyIndent(String s1, int n){
-
-
+//???
+    public static void applyIndent(String s1, int n){
 
 
-        return s1;
+        String indent = "";
+        for(int i=0; i<n; i++){
+            s1 = indent+s1;
+            indent = "-"+ indent;
+
+            System.out.println(s1);
+        }
+
+
+
+
+
+
+
 
 
 
 
 
     }
+//???
+    public static String transformString(String s1){
+
+
+
+
+        return s1;
+    }
+
+    public static Map<String,Integer> minMax(int a, int b){
+
+        Map<String, Integer> myMap = new HashMap<>();
+
+        myMap.put("maximum",Math.max(a,b));
+        myMap.put("minimum",Math.min(a,b));
+
+        return myMap;
+
+
+    }
+
+    public static int sumLargeNumb(){
+
+        int x = Integer.MAX_VALUE;
+        int y = Integer.MAX_VALUE;
+
+        BinaryOperator<Integer>op = Math::addExact;
+
+        int sum = op.apply(x,y);
+
+        return sum;
+
+
+
+    }
+//???
+    public static void unsignedNumb(String s){
+
+
+
+
+
+    }
+
+    public static void logicals(boolean b1, boolean b2){
+
+
+        System.out.println(Boolean.logicalAnd(b1,b2));
+        System.out.println(Boolean.logicalOr(b1,b2));
+        System.out.println(Boolean.logicalXor(b1,b2));
+
+
+    }
+
+    public static void transformBigInt(){
+
+
+      BigInteger x = BigInteger.valueOf(Long.MAX_VALUE);
+      long xLong = x.longValue();
+      int xInt = x.intValueExact();
+
+        System.out.println(xInt);
+
+
+
+    }
+
+    public static void convertLongToInt(){
+
+        long maxLong = Long.MAX_VALUE;
+
+       // not correct ---> int x = (int)maxLong;
+
+        int x = Math.toIntExact(maxLong);
+
+        System.out.println(x);
+
+    }
+
+    public static void floorDivision(int a, int b){
+
+        int result1 = Math.floorDiv(a,b);
+        int result2 = Math.floorMod(a,b);
+
+        System.out.println(result1);
+        System.out.println(result2);
+
+    }
+
+    public static void multiplyLargeNumb(){
+
+        int a = Integer.MAX_VALUE;
+        int b = Integer.MAX_VALUE;
+
+        // nu e corect ---> int result1 = a*b;
+
+
+        int result2 = Math.multiplyExact(a,b);
+
+
+
+        System.out.println(result2);
+
+
+
+    }
+
+
+
+
+
 
 
 

@@ -19,12 +19,7 @@ public class Main {
         char c = '*';
 
 
-        for(int i=0; i<10; i++){
-
-
-            System.out.println(applyIndent(s5,10));
-
-        }
+     multiplyLargeNumb();
 
 
 
