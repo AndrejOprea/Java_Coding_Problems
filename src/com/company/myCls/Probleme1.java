@@ -550,6 +550,35 @@ public class Probleme1 {
 
     }
 
+    public static void nextFloatValue(){
+
+        float f = 0.1f;
+
+        float nextFloat1 = Math.nextAfter(f,Float.NEGATIVE_INFINITY);
+        float nextFloat2 = Math.nextAfter(f, Float.POSITIVE_INFINITY);
+
+        float down = Math.nextDown(f);
+        float up = Math.nextUp(f);
+
+        System.out.println(nextFloat1);
+        System.out.println(nextFloat2);
+        System.out.println(down);
+        System.out.println(up);
+        //same for "double"
+    }
+
+    public static void multiplyLarge(){
+
+       long x = Long.MAX_VALUE;
+       long y = Long.MAX_VALUE;
+       long z1 = Math.multiplyExact(x,y);
+
+     //   long z2 = Math.multiplyHigh(x,y); -> available in jdk 9
+
+        System.out.println(z1);
+
+    }
+
 
 
 
