@@ -2,6 +2,7 @@ package com.company;
 
 import com.company.myCls.Probleme1;
 
+import java.awt.*;
 import java.util.Arrays;
 import java.util.List;
 
@@ -21,8 +22,11 @@ public class Main {
 
       //  checkNullRef02("vw", null);
 
-        checkNullRef03(10);
+      //  Color myColor = new Color(77,33,100);
 
+     //  checkNullRef04("vw",myColor);
+
+       // System.out.println(checkRange(4,3,0,5));
 
 
 

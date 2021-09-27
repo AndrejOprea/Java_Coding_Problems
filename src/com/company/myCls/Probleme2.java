@@ -1,5 +1,6 @@
 package com.company.myCls;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -83,6 +84,99 @@ public class Probleme2 {
 
 
     }
+
+    public static String checkNullRef04(String name, Color color){
+
+      /*  List<Integer>  mylist = Arrays.asList(3,4,null,5,6,100);
+
+        for (int i = 0; i < mylist.size(); i++) {
+            if(mylist.get(i)!=null){
+                System.out.println(mylist.get(i));
+            }else{
+                System.out.println("101");
+            }
+        }
+*/
+        class Car{
+
+            private final String name;
+            private final Color color;
+
+            public Car(String name,Color color){
+                if(name==null){
+
+                    this.name = "No name";
+
+                }else{
+                    this.name = name;
+                }
+                if(color==null){
+
+                    this.color = new Color(0,0,0);
+                }else{
+                    this.color = color;
+                }
+            }
+
+            @Override
+            public String toString() {
+                return "Car{" +
+                        "name='" + name + '\'' +
+                        ", color=" + color +
+                        '}';
+            }
+        }
+        Car car = new Car (name,color);
+
+
+        return car.toString();
+
+
+
+    }
+
+    public static int checkRange(int x, int y, int min, int max){
+
+        int dif = 0;
+
+        if(x<min||x>max){
+            throw new IndexOutOfBoundsException("X out of bounds");
+        }else if(y>x){
+
+            throw new IllegalArgumentException("Y can not be grater than X");
+
+        }else{
+
+            dif = x-y;
+        }
+
+       return dif;
+
+    }
+
+    public static void checkSubRange(int x, int y, int range){
+
+        /*
+        range = Objects.checkIndex(range, 100);
+
+         */
+
+        // Objects.checkFromToIndex(x,y,n);
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
 
 
 
