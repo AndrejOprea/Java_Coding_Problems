@@ -171,6 +171,37 @@ public class Probleme2 {
 
     }
 
+    public static void immutableClass(){
+
+
+         final class MyClass {
+
+
+            public final int x;
+            public final int y;
+
+            public MyClass(int x, int y) {
+                this.x = x;
+                this.y = y;
+            }
+        }
+
+      /*  class OtherClass extends MyClass{
+
+
+            public OtherClass(int x, int y) {
+                super(x, y);
+            }
+        }*/
+
+        // "OtherClass" can not inherit from MyClass
+
+
+
+    }
+
+
+
 
 
 

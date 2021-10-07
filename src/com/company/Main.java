@@ -1,6 +1,9 @@
 package com.company;
 
-import com.company.myCls.Probleme1;
+
+
+import com.company.Immutable.Coordonate;
+import com.company.Immutable.MyImmuableClass;
 
 import java.awt.*;
 import java.util.Arrays;
@@ -8,13 +11,13 @@ import java.util.List;
 
 import static com.company.myCls.Probleme1.*;
 import static com.company.myCls.Probleme2.*;
-
+import static com.company.Immutable.MyImmuableClass.*;
 public class Main {
 
     public static void main(String[] args) {
 
 
-        List<Integer>myList = Arrays.asList(4,2,1,null,2);
+      //  List<Integer>myList = Arrays.asList(4,2,1,null,2);
 
         //System.out.println(checkNullRef01(myList));
 //Probleme1 p1 = null;
@@ -27,6 +30,17 @@ public class Main {
      //  checkNullRef04("vw",myColor);
 
        // System.out.println(checkRange(4,3,0,5));
+
+        /*Coordonate coordonate = new Coordonate(3,new MyImmuableClass());
+
+        coordonate.ic.setX(2);
+        */
+
+        Coordonate coordonate = new Coordonate(4,new MyImmuableClass(2,3));
+
+        System.out.println(coordonate.getIc());
+
+
 
 
 
