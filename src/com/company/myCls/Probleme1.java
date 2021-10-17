@@ -375,12 +375,13 @@ public class Probleme1 {
         int[]v1 = vector_frecventa(s1);
         int[]v2 = vector_frecventa(s2);
 
+        Arrays.sort(v1);
+        Arrays.sort(v2);
+
         for(int i=0; i <v2.length; i++){
 
-            if(v1[i]==v2[i]){
-                return true;
-            }
 
+            return v1[i]==v2[i];
 
         }
 
@@ -427,6 +428,7 @@ public class Probleme1 {
         for(int i=0; i<n; i++){
             s1 = indent+s1;
             indent = "-"+ indent;
+
 
             System.out.println(s1);
         }
