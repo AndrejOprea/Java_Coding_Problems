@@ -3,6 +3,9 @@ package com.company.myCls;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class Probleme3 {
 
@@ -123,10 +126,75 @@ public class Probleme3 {
 //
 
 
+    }
 
+
+    public static void definePeriod(){
+
+        //Period and duration APIs.
+
+//        Period fromDays = Period.ofDays(100);
+//
+//        LocalDate localDate = LocalDate.now();
+//
+//        Period p2 = Period.of(localDate.getYear(),localDate.getMonthValue(),localDate.getDayOfMonth());
+//
+//        System.out.println(p2.toString());
+//
+//        Period p = Period.parse("P2021Y10M19D");
+//
+//        System.out.println(p.toString());
+
+//        LocalDate start = LocalDate.of(2018,04,20);
+//        LocalDate end = LocalDate.of(2020,05,20);
+//
+//        Period periodBetween = Period.between(start,end);
+
+     //   System.out.println(periodBetween.toString());
+
+//        StringBuilder sb = new StringBuilder();
+//        sb.append(periodBetween.getYears())
+//                .append("/").append(periodBetween.getMonths()).append("/")
+//                .append(periodBetween.getDays());
+//
+//        System.out.println(sb.toString());
+
+//        Duration d = Duration.of(3,ChronoUnit.DAYS);
+//
+//        System.out.println(d.toString());
+
+//        LocalTime localTime = LocalTime.of(4,57);
+//
+//        Duration d2 = Duration.ofMinutes(localTime.getMinute());
+//
+//        System.out.println(d2);
+
+        LocalTime l1 = LocalTime.of(4,14,20,670);
+        LocalTime l2 = LocalTime.of(6,14,10,720);
+
+        Duration d = Duration.between(l1,l2);
+
+        System.out.println(d.toString());
 
     }
 
+    public static void getTimeUnits(){
+
+        LocalDateTime localDateTime = LocalDateTime.now();
+
+        List<Integer>myList = new ArrayList<>(Arrays.asList(localDateTime.getYear(),
+                localDateTime.getDayOfMonth(),localDateTime.getDayOfMonth(),
+                localDateTime.getHour(),localDateTime.getMinute(),
+                localDateTime.getSecond(),localDateTime.getNano()));
+
+        for(int i=0; i<myList.size(); i++){
+
+            System.out.println(myList.get(i));
+        }
+
+
+
+    }
 
 
 

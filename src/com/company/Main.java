@@ -66,7 +66,11 @@ public class Main {
 
       //  combineDateTime();
 
-        timeViaInstant();
+       // timeViaInstant();
+
+      //  definePeriod();
+
+        getTimeUnits();
 
 
 
