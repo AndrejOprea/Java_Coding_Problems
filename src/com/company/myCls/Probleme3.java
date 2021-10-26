@@ -6,6 +6,7 @@ import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Set;
 
 public class Probleme3 {
 
@@ -195,6 +196,76 @@ public class Probleme3 {
 
 
     }
+
+
+    public static void addAndSubtract(){
+
+       // LocalDate localDate = LocalDate.now().minusDays(3);
+
+        //   LocalDate localDate = LocalDate.now().plusDays(5);
+
+      //  LocalDateTime localDateTime = LocalDateTime.now().minusMinutes(38);
+
+     //   System.out.println(localDateTime.toString());
+
+
+    }
+
+    public static void getAllTimeZones(){
+
+//        Set<String> zoneIds = ZoneId.getAvailableZoneIds();
+//
+//        for(int i=0; i< zoneIds.size(); i++){
+//
+//
+//            System.out.println(zoneIds.toString());
+//        }
+
+        ZoneId zoneId = ZoneId.of("Europe/London");
+        LocalDateTime now = LocalDateTime.now();
+        ZonedDateTime zonedDateTime = now.atZone(zoneId);
+
+
+
+//        String utcOffset = zonedDateTime.getOffset().getId().replace("Z","+00:00");
+//
+//        System.out.println(utcOffset);
+
+
+    }
+
+
+    public static void getLocalDateTime(){
+
+        DateTimeFormatter dateTimeFormatter =
+                DateTimeFormatter.ofPattern("yyyy-MMM-E'T'HH:mm:ss Z");
+
+
+        ZonedDateTime zonedDateTime = ZonedDateTime.now();
+
+        System.out.println(zonedDateTime.format(dateTimeFormatter).toString());
+
+
+    }
+
+    public static void flightDateTime(){
+
+        LocalDateTime localDateTime =
+                LocalDateTime.of(2021,10,26,19,29);
+
+        ZonedDateTime zonedDateTimeDepart= localDateTime.atZone(ZoneId.of("Australia/Perth"));
+
+        ZonedDateTime zonedDateTimeArrive = zonedDateTimeDepart.plusHours(15).plusMinutes(30);
+
+
+
+    }
+
+
+
+
+
+
 
 
 

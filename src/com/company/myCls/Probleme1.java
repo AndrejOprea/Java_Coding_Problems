@@ -100,12 +100,9 @@ public class Probleme1 {
 
                 myMap.put(c, myMap.get(c) + 1);
 
-
             } else {
                 myMap.put(c, i);
             }
-
-
         }
         return myMap;
 
