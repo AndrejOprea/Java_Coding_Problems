@@ -3,10 +3,11 @@ package com.company.myCls;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Set;
+import java.time.temporal.Temporal;
+import java.time.temporal.TemporalAdjuster;
+import java.time.temporal.TemporalAdjusters;
+import java.util.*;
+import java.util.concurrent.TimeUnit;
 
 public class Probleme3 {
 
@@ -39,7 +40,6 @@ public class Probleme3 {
 //        System.out.println(localDate.toString());
 
     }
-
 
     public static void formatingDateTime(){
 
@@ -129,7 +129,6 @@ public class Probleme3 {
 
     }
 
-
     public static void definePeriod(){
 
         //Period and duration APIs.
@@ -197,7 +196,6 @@ public class Probleme3 {
 
     }
 
-
     public static void addAndSubtract(){
 
        // LocalDate localDate = LocalDate.now().minusDays(3);
@@ -234,7 +232,6 @@ public class Probleme3 {
 
     }
 
-
     public static void getLocalDateTime(){
 
         DateTimeFormatter dateTimeFormatter =
@@ -257,6 +254,50 @@ public class Probleme3 {
 
         ZonedDateTime zonedDateTimeArrive = zonedDateTimeDepart.plusHours(15).plusMinutes(30);
 
+
+
+    }
+
+    public static void unix(){
+
+//before jdk8
+//        long unixTimeStamp = 1577769800;
+//
+//        Date date = new Date(unixTimeStamp * 1000);
+//
+//        Date date1 = new Date(TimeUnit.MILLISECONDS.convert(unixTimeStamp,TimeUnit.SECONDS));
+//
+//        System.out.println(date1.toString());
+
+        long unixTimeStamp = 1577769800;
+
+        Instant instant = Instant.ofEpochSecond(unixTimeStamp);
+
+        LocalDateTime timePerth = LocalDateTime.ofInstant(instant,ZoneId.of("Australia/Perth"));
+        LocalDateTime timeBucharest = LocalDateTime.ofInstant(instant,ZoneId.of("Europe/Bucharest"));
+        ZonedDateTime zonedDateTime = ZonedDateTime.ofInstant(instant,ZoneId.of("Europe/Bucharest"));
+
+
+        System.out.println(timePerth.toString());
+        System.out.println(timeBucharest.toString());
+        System.out.println(zonedDateTime.toString());
+    }
+
+    public static void firstLastDayofMonth(){
+
+       LocalDate localDate = LocalDate.now();
+
+       LocalDate first = localDate.with(TemporalAdjusters.firstDayOfMonth());
+       LocalDate last = localDate.with(TemporalAdjusters.lastDayOfMonth());
+
+       LocalDate firstDayYear = localDate.with(TemporalAdjusters.firstDayOfYear());
+
+       DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MMM-E");
+
+
+        System.out.println(dateTimeFormatter.format(first));
+        System.out.println(last.toString());
+        System.out.println(firstDayYear.toString());
 
 
     }

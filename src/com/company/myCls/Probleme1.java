@@ -11,16 +11,7 @@ public class Probleme1 {
 
     //todo (P1): counting duplicate characters
 
-
-
-
-
     //todo; show method
-
-
-
-
-
 
 
     //todo (P3): reversing letters and words
