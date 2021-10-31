@@ -302,6 +302,30 @@ public class Probleme3 {
 
     }
 
+    public static void extractOffsets(){
+
+//        OffsetDateTime odt = OffsetDateTime.now();
+//
+//        System.out.println(odt.toString().substring(odt.toString().length()-6));
+        LocalDateTime ldt = LocalDateTime.now();
+
+        ZoneId zoneId = ZoneId.of("Europe/Bucharest");
+        ZoneOffset zoneOffset = zoneId.getRules().getOffset(ldt);
+
+        System.out.println(zoneOffset.toString());
+
+    }
+
+    public static void dateInstant(){
+
+        Instant instant = Instant.now();
+
+        Date date = Date.from(instant);
+
+        System.out.println(date.toString());
+
+    }
+
 
 
 
