@@ -326,6 +326,38 @@ public class Probleme3 {
 
     }
 
+    public static void dateIteration(){
+
+        //LocalDate now = LocalDate.now();
+        LocalDate afterThen = LocalDate.of(2021,11,10);
+
+        for(LocalDate now = LocalDate.now(); now.isBefore(afterThen); now = now.plusDays(1)){
+
+
+            System.out.println(now.toString());
+
+        }
+
+
+
+
+    }
+
+    public static void ageDetermination(){
+
+        LocalDate birthDate = LocalDate.of(1930,03,20);
+
+        LocalDate ageDet = LocalDate.now();
+
+        Period period = Period.between(birthDate,ageDet);
+
+        System.out.println(period.toString());
+
+    }
+
+
+
+
 
 
 

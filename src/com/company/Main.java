@@ -86,7 +86,12 @@ public class Main {
 
         //extractOffsets();
 
-        dateInstant();
+       // dateInstant();
+
+
+        //dateIteration();
+
+        ageDetermination();
 
 
 
