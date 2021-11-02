@@ -356,6 +356,52 @@ public class Probleme3 {
     }
 
 
+    public static void startEndDay(){
+
+        LocalDate ld = LocalDate.now();
+
+        LocalDateTime ldt1 = ld.atStartOfDay();
+
+        LocalDateTime ldt2 = ld.atTime(LocalTime.MAX);
+
+        System.out.println(ldt1.toString());
+        System.out.println(ldt2.toString());
+
+    }
+
+    public static void differenceBetweenDates(){
+
+        LocalDate ld1 = LocalDate.of(2020,7,11);
+        LocalDate ld2 = LocalDate.of(2021,11,01);
+
+//        Period period = Period.between(ld1,ld2);
+//
+//        System.out.println(period.toString());
+
+        long days = Math.abs(ChronoUnit.DAYS.between(ld1,ld2));
+
+        long months = Math.abs(ChronoUnit.MONTHS.between(ld1,ld2));
+
+        long years = Math.abs(ChronoUnit.YEARS.between(ld1,ld2));
+
+        System.out.println(days +"---" +months+ "---"+ years);
+
+
+
+    }
+
+    public static void implementChessClock(){
+
+        Clock fixed = Clock.fixed(Instant.now(),ZoneOffset.UTC);
+
+        System.out.println(fixed.toString());
+
+        Clock tickClock = Clock.tickSeconds(ZoneId.of("Europe/Bucharest"));
+
+        System.out.println(tickClock.instant());
+
+
+    }
 
 
 

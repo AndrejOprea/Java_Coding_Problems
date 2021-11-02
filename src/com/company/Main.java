@@ -6,14 +6,17 @@ import com.company.Immutable.Coordonate;
 import com.company.Immutable.MyImmuableClass;
 import com.company.builders.BuilderPhone;
 import com.company.builders.ExamplePhone;
-
+import com.company.builders.Melon;
 import java.awt.*;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 import static com.company.myCls.Probleme1.*;
 import static com.company.myCls.Probleme2.*;
 import static com.company.myCls.Probleme3.*;
+import static com.company.myCls.Probleme5.*;
+
 import static com.company.Immutable.MyImmuableClass.*;
 public class Main {
 
@@ -91,7 +94,55 @@ public class Main {
 
         //dateIteration();
 
-        ageDetermination();
+        //ageDetermination();
+
+  //  startEndDay();
+
+       // differenceBetweenDates();
+
+       // implementChessClock();
+
+
+//int[]a = {9,4,6,2,8};
+//
+////sortArray1(a);
+////
+////        System.out.println(Arrays.toString(a));
+//
+//        for(int i=0; i<sortArray2(a).size();i++){
+//
+//            System.out.println(sortArray2(a).get(i));
+//        }
+
+//        Melon []melons = new Melon[5];
+//
+//        melons[0] = new Melon(5);
+//        melons[1] = new Melon(3);
+//        melons[2] = new Melon(8);
+//        melons[3] = new Melon(2);
+//        melons[4] = new Melon(1);
+//
+//        Arrays.sort(melons, new Comparator<Melon>() {
+//            @Override
+//            public int compare(Melon o1, Melon o2) {
+//                //ascending
+//                //return Integer.compare(o1.getWeight(), o2.getWeight());
+//
+//                //descending
+//                return (-1)*Integer.compare(o1.getWeight(), o2.getWeight());
+//
+//            }
+//        });
+//
+//        System.out.println(Arrays.toString(melons));
+//
+
+
+
+
+
+
+
 
 
 
