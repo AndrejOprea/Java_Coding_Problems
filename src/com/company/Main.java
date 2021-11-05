@@ -9,6 +9,7 @@ import com.company.builders.ExamplePhone;
 import com.company.builders.Melon;
 import java.awt.*;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -136,6 +137,44 @@ public class Main {
 //
 //        System.out.println(Arrays.toString(melons));
 //
+
+       // System.out.println(Arrays.toString(sortArr3()));
+
+//        int[]a={8,2,9,5,7};
+//
+//        int x = 6;
+//
+//        System.out.println(findElement(x,a));
+
+
+//        Melon []melons = new Melon[5];
+//
+//        melons[0] = new Melon(5);
+//        melons[1] = new Melon(3);
+//        melons[2] = new Melon(8);
+//        melons[3] = new Melon(2);
+//        melons[4] = new Melon(1);
+//
+//
+//        Melon x = new Melon(90);
+
+      // boolean statement =  containsElement(melons,x);
+
+       // System.out.println(containsElement(melons,melons[1]));
+
+
+
+       int[]a1 = {5,4,8};
+       int[]a2 = {8,4,5};
+
+        System.out.println(Arrays.equals(a1,a2));
+
+
+
+
+
+
+
 
 
 

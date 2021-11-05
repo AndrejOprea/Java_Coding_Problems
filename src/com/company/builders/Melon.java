@@ -1,6 +1,6 @@
 package com.company.builders;
 
-public class Melon {
+public class Melon implements Comparable<Melon>{
 
     private String type;
     private int weight;
@@ -30,5 +30,10 @@ public class Melon {
 
         String text = "Greutate melon este : " + this.weight;
         return text;
+    }
+
+    @Override
+    public int compareTo(Melon o) {
+        return Integer.compare(this.weight,o.getWeight());
     }
 }
