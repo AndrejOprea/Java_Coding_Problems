@@ -164,11 +164,27 @@ public class Main {
 
 
 
-       int[]a1 = {5,4,8};
-       int[]a2 = {8,4,5};
+//       int[]a1 = {5,4,8,3};
+//       int[]a2 = {8,4,5};
+//
+//        System.out.println(Arrays.equals(a1,a2));
 
-        System.out.println(Arrays.equals(a1,a2));
+//
+//        Melon []melons = new Melon[5];
+//
+//        melons[0] = new Melon(5);
+//        melons[1] = new Melon(3);
+//        melons[2] = new Melon(8);
+//        melons[3] = new Melon(2);
+//        melons[4] = new Melon(1);
+//
+//        Melon tocontain = new Melon(5578);
+//       // containsElement(melons,tocontain);
+//        System.out.println(containsElement(melons,tocontain));
 
+        int[]a1 = {5,4,5,6};
+
+        minMaxAvg(a1);
 
 
 
