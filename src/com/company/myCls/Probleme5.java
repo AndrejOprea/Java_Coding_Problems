@@ -131,6 +131,66 @@ public class Probleme5 {
 
     }
 
+    public static void reverseArr(int[]arr){
+
+        int[]reverse = new int[arr.length];
+
+        int j=0;
+
+        for(int i= arr.length-1; i>=0;i--){
+
+            reverse[j]=arr[i];
+            j++;
+        }
+
+        System.out.println(Arrays.toString(reverse));
+
+    }
+
+    public static void fillArray(int []arr){
+
+//        for(int i=1; i<=10; i++){
+//
+//
+//            arr[i]=i;
+//        }
+//
+//        System.out.println(Arrays.toString(arr));
+
+        Arrays.setAll(arr,t -> {
+            if(t == 0){
+                return arr[t];
+            }else{
+                return arr[t - 1] + 1;
+            }
+        });
+
+        System.out.println(Arrays.toString(arr));
+
+    }
+
+    public static void nge(int []arr){
+
+        for(int i=0; i<arr.length; i++){
+
+            for(int j = i; j<arr.length; j++){
+
+                if(arr[j]>arr[i]){
+
+                    System.out.println(arr[i] + ":" + arr[j]);
+                    i++;
+                }else{
+
+                    System.out.println(arr[i] + ":" + -1);
+                }
+            }
+
+
+        }
+
+
+    }
+
 
 
 }

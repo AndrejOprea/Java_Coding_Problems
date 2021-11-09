@@ -182,10 +182,18 @@ public class Main {
 //       // containsElement(melons,tocontain);
 //        System.out.println(containsElement(melons,tocontain));
 
-        int[]a1 = {5,4,5,6};
+//        int[]a1 = {5,4,5,6};
+//
+//        minMaxAvg(a1);
 
-        minMaxAvg(a1);
 
+
+       //fillArray(a);
+
+       // reverseArr(a);
+        int []a = {1,2,3,4,12,2,1,4};
+
+        nge(a);
 
 
 
