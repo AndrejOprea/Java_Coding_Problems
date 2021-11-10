@@ -191,9 +191,9 @@ public class Main {
        //fillArray(a);
 
        // reverseArr(a);
-        int []a = {1,2,3,4,12,2,1,4};
+        int []a = {1,2,3};
 
-        nge(a);
+        changeArrSize(a,9);
 
 
 

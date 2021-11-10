@@ -170,23 +170,31 @@ public class Probleme5 {
     }
 
     public static void nge(int []arr){
-
+        int nge;
         for(int i=0; i<arr.length; i++){
-
-            for(int j = i; j<arr.length; j++){
+            nge = -1;
+            for(int j = i+1; j<arr.length; j++){
 
                 if(arr[j]>arr[i]){
 
-                    System.out.println(arr[i] + ":" + arr[j]);
-                    i++;
-                }else{
-
-                    System.out.println(arr[i] + ":" + -1);
+                    nge = arr[j];
+                    break;
                 }
-            }
 
+            }
+            System.out.println(arr[i] + ":" + nge);
 
         }
+
+
+    }
+
+    public static void changeArrSize(int[]arr, int item){
+
+        int[]newArr = Arrays.copyOf(arr,arr.length+1);
+        newArr[newArr.length-1] = item;
+
+        System.out.println(Arrays.toString(newArr));
 
 
     }
