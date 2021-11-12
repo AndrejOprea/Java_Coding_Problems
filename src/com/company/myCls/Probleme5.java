@@ -199,6 +199,16 @@ public class Probleme5 {
 
     }
 
+    public static int immCollections(){
+
+       final List<Integer> list = Collections.unmodifiableList(Arrays.asList(1,2,3,4,5));
+
+       // list.add(10);
+
+        return list.get(0);
+
+    }
+
 
 
 }

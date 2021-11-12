@@ -8,9 +8,7 @@ import com.company.builders.BuilderPhone;
 import com.company.builders.ExamplePhone;
 import com.company.builders.Melon;
 import java.awt.*;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.*;
 import java.util.List;
 
 import static com.company.myCls.Probleme1.*;
@@ -191,10 +189,18 @@ public class Main {
        //fillArray(a);
 
        // reverseArr(a);
-        int []a = {1,2,3};
+//        int []a = {1,2,3};
+//
+//        changeArrSize(a,9);
 
-        changeArrSize(a,9);
 
+
+//        for(Integer i : immCollections()){
+//
+//            System.out.println(i);
+//        }
+
+        System.out.println(immCollections());
 
 
 
