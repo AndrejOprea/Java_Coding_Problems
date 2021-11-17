@@ -200,7 +200,20 @@ public class Main {
 //            System.out.println(i);
 //        }
 
-        System.out.println(immCollections());
+       // System.out.println(immCollections());
+
+        Map<Integer,String> map = new HashMap<>();
+        map.put(1,"unu");
+        map.put(2,"doi");
+        map.put(3,"trei");
+        map.put(4,"patru");
+        map.put(5,"cinci");
+
+        //getValueFromMap(map,5);
+
+        String s1 = map.getOrDefault(6,"nu este");
+
+        System.out.println(s1);
 
 
 

@@ -2,10 +2,7 @@ package com.company.myCls;
 
 import com.company.builders.Melon;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Probleme5 {
@@ -207,6 +204,17 @@ public class Probleme5 {
 
         return list.get(0);
 
+    }
+
+    public static void getValueFromMap(Map<Integer,String>myMap, int myKey){
+
+       for(Map.Entry<Integer,String> entry : myMap.entrySet()){
+
+           if(entry.getKey().equals(myKey)){
+
+               System.out.println(entry.getValue());
+           }
+       }
     }
 
 
