@@ -208,6 +208,8 @@ public class Probleme5 {
 
     public static void getValueFromMap(Map<Integer,String>myMap, int myKey){
 
+        //String s1 = map.getOrDefault(6,"nu este");
+
        for(Map.Entry<Integer,String> entry : myMap.entrySet()){
 
            if(entry.getKey().equals(myKey)){
@@ -215,6 +217,13 @@ public class Probleme5 {
                System.out.println(entry.getValue());
            }
        }
+    }
+
+    public static void absentPresent(Map<Integer,String>myMap){
+
+
+
+
     }
 
 
