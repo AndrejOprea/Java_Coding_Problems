@@ -7,7 +7,6 @@ import java.util.stream.Collectors;
 
 public class Probleme5 {
 
-
     public static int[] sortArray1(int[]arr){
 
         int flag=1;
@@ -219,13 +218,54 @@ public class Probleme5 {
        }
     }
 
-    public static void absentPresent(Map<Integer,String>myMap){
+    public static void absentPresent(Map<Integer,String>myMap, String v){
 
+        for(Map.Entry<Integer,String>entry:myMap.entrySet()){
+
+            if(entry.getValue().equals(v)){
+                System.out.println("Am gasit valoarea !");
+            }else{
+                System.out.println("Try again !");
+            }
+
+        }
+
+    }
+
+    public static void mapRemoval(Map<Integer,String> myMap, int k){
+
+
+
+      myMap.remove(k);
+    }
+
+    public static void replaceEntrances(Map<Integer,String> myMap, int newKey, String newValue){
+
+        myMap.replace(newKey, myMap.get(newKey),newValue);
 
 
 
     }
 
+    public static boolean compaireMaps(Map<Integer,String> myMap,Map<Integer,String> yourMap){
 
+            return myMap.equals(yourMap);
+
+    }
+
+    public static void mergeMaps(Map<Integer,String> myMap,Map<Integer,String> yourMap){
+
+
+
+        for(int i = 1; i<= myMap.size(); i++){
+
+            myMap.merge(i, yourMap.get(i+5),String::concat);
+
+        }
+
+
+
+
+    }
 
 }

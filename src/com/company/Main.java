@@ -17,6 +17,8 @@ import static com.company.myCls.Probleme3.*;
 import static com.company.myCls.Probleme5.*;
 
 import static com.company.Immutable.MyImmuableClass.*;
+import static javafx.scene.input.KeyCode.V;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -211,12 +213,42 @@ public class Main {
 
         //getValueFromMap(map,5);
 
-        String s1 = map.getOrDefault(6,"nu este");
+//        String s1 = map.getOrDefault(6,"nu este");
+//
+//        System.out.println(s1);
 
-        System.out.println(s1);
+//        absentPresent(map,"trei");
+//
+//       mapRemoval(map,3);
+//
+//        for(Map.Entry<Integer,String>entry:map.entrySet()){
+//
+//            System.out.println(entry.getKey() +"-----"+entry.getValue());
+//        }
+
+//        replaceEntrances(map,2,"doisijumatate");
+//
+//
+//        for(Map.Entry<Integer,String>entry:map.entrySet()){
+//
+//            System.out.println(entry.getKey() + "-----" +entry.getValue());
+//        }
+
+        Map<Integer,String> map2 = new HashMap<>();
+
+        map2.put(6,"sase");
+        map2.put(7,"sapte");
+        map2.put(8,"opt");
+        map2.put(9,"noua");
+        map2.put(10,"zece");
 
 
+       // System.out.println(compaireMaps(map, map2));
+        mergeMaps(map,map2);
+        for(Map.Entry<Integer,String>entry:map.entrySet()){
 
+            System.out.println(entry.getKey() + "-----" +entry.getValue());
+        }
 
 
 
