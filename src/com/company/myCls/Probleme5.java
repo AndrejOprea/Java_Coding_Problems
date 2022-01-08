@@ -1,8 +1,10 @@
 package com.company.myCls;
 
 import com.company.builders.Melon;
+import com.company.myCls.Melons;
 
 import java.util.*;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class Probleme5 {
@@ -267,5 +269,115 @@ public class Probleme5 {
 
 
     }
+
+
+    //de finalizat
+    public static Map<Integer,String> performCopy(Map<Integer,String> myMap){
+
+        //shallow copy
+
+    myMap = new HashMap<>();
+
+    //Map<Integer,String> shallow = new HashMap<>(myMap);
+//    Map<Integer,String> shallow = new HashMap<>();
+//
+//    shallow.putAll(myMap);
+
+        Map<Integer,String> deep = new HashMap<>();
+
+
+    return deep;
+
+    }
+
+    public static Map<Integer,String> sortMap(Map<Integer,String> myMap){
+
+        Map<Integer, String>map2 = new HashMap<>();
+
+        List<Integer>l1 = new ArrayList<>(myMap.keySet());
+        List<String>l2 = new ArrayList<>(myMap.values());
+
+        Collections.sort(l1);
+        Collections.sort(l2);
+
+        for(int i =0; i< myMap.size(); i++){
+
+            map2.put(l1.get(i),l2.get(i));
+        }
+
+        return map2;
+
+    }
+
+    //de vazut solutiile din carte
+    public static Collection<String> removeElem(Collection<String>bigC,Collection<String>smallC){
+
+       bigC.removeAll(smallC);
+
+
+        return bigC;
+
+
+    }
+
+
+    public static boolean removeElem2(Collection<String>collection, Predicate<String> filter){
+
+        return collection.removeIf(filter);
+    }
+    //de vazut solutiile din carte
+    public static String[] conversionToArr (Collection<String>myCollection){
+
+        return myCollection.toArray(new String[myCollection.size()]);
+
+    }
+
+    public static List<Melons> filterCollection(List<Melons> melonList, List<String>nameMelon){
+
+        List<Melons>melonsCollection = new ArrayList<>();
+
+       for(int i=0; i< melonList.size(); i++){
+
+           for(int j=0; j< nameMelon.size(); j++){
+
+
+               if(melonList.get(i).getType().equals(nameMelon.get(j))){
+
+                   melonsCollection.add(melonList.get(i));
+
+               }
+           }
+       }
+
+        return melonsCollection;
+
+    }
+
+    public static void stackUsage(Stack<Integer>myStack){
+
+       while(!myStack.isEmpty()){
+
+           System.out.println(myStack.peek());
+
+           myStack.pop();
+       }
+
+
+
+
+
+    }
+
+    public static void queuesUsage(Queue<Integer>myQueue){
+
+
+        while(!myQueue.isEmpty()){
+
+            System.out.println(myQueue.peek());
+            myQueue.remove();
+        }
+    }
+
+
 
 }
